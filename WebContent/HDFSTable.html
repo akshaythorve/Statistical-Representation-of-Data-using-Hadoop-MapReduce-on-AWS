@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        /* 
+        Adding hardcoded Hadoop HDFS result of my "Hadoop Mapreduce JAVA" API project below.
+        Hadoop Mapreduce JAVA API code link :<GitHub link: https://github.com/akshaythorve/Hadoop-MapReduce-JAVA.git>
+        These values are exact output we are getting after running mapR.
+        This can be very easily exported or Inserted in to any type of database.
+        
+         */
+        ['State', 'Republican', 'Democratic', 'Total Votes 2016', 'Total Votes 2012']
+        
+        data.addColumn('string', 'State');
+        data.addColumn('number', 'Republican');
+        data.addColumn('number', 'Democratic');
+        data.addColumn('number', 'Total Votes 2016');
+        data.addColumn('number', 'Total Votes 2012');
+        
+        
+        data.addRows([
+       
+         
+
+          ['AL', 718084,	1306925,	2078165,	2064699],
+          ['AR',	378729,	677904	,1108615,	1062831],
+          ['AZ',	936250,	1021154	,2062810,	2041519],
+          ['CA',	7230699,	3841134,	11733523,	10538656],
+          ['CO',	1212209,	1137455	,2564185,	2419698],
+          ['CT',	884432,	668266	,1623542,	1562187],
+          ['DC',	260223,	11553	,280272	,243348],
+          ['DE',	235581,	185103	,441535	,413844],
+          ['FL',	4485745,	4605515,	9386750,	8470205],
+          ['GA',	1837300,	2068623	,4029564,	3877038],
+          ['HI',	266827,	128815	,428825	,429494],
+          ['IA',	650790,	798923	,1542880,	1565968],
+          ['ID',	189677,	407199	,688235	,651871],
+          ['IL',	2977498,	2118179,	5374280,	5113726],
+          ['IN',	1031953	,1556220	,2722029,	2602883],
+          ['KS',	414788	,656009	,1147143	,1131244],
+          ['KY',	628834	,1202942,	1922218,	1796736],
+          ['LA',	779535	,1178004,	2027731,	1993555],
+          ['MA',	1964768	,1083069,	3231531,	3129731],
+          ['MD',	1497951	,873646,	2474543,	2475956],
+          ['ME',	354873	,334838,	741550,	710738],
+          ['MI',	2268193	,2279805,	4790917,	4717728],
+          ['MN',	1366676	,322891,	2916404,	2928942],
+          ['MO'	,1054889	,1585753,	2775098,	2744935],
+          ['MS',	462001	,678457,	1162987,	1214004],
+          ['MT',	174521	,274120,	483574,	479386],
+          
+          
+          
+          
+          ['NC',	2162074	,2339603,	4629471,	4499039],
+          ['ND',	93526	,216133,	336968,	319825],
+          ['NE',	273858	,485819,	805638	,765083],
+          ['NH',	348521	,345789,	731553	,705874],
+          ['NJ', 2021756	,1535513,	3674893	,3378826],
+         
+          ['NM', 380724	,315875	,783127,	772329],
+          ['NV', 537753	,511319	,1122990,	1011105],
+          ['NY', 4143874,	2640570,	7046175	,6188982],
+          ['OH', 2317001,	2771984,	5325395	,5379090],
+          ['OK', 419788	,947934,	1451056	,1332019],
+          ['OR',	934631,	742506,	1808575	,1713697],
+         
+          ['PA',	2844705,	2912941,	5970107,	5596499],
+          ['RI',	249902,	179421,	450121	,437380],
+          ['SC',	849469	,1143611,	2084444,	1921363],
+          ['SD',	117442	,227701	,370047	,363695],
+          ['TN',	867110	,1517402,	2484691,	2442804],
+          ['TX',	3867816	,4681590,	8903237	,7962799],
+          ['UT',	274188	,452086,	984957,	923301],
+          ['VA',	1916845	,1731156,	3844787,	3745060],
+          ['VT',	178179	,95053,	291413	,297274],
+          ['WA',	1610524	,1129120,	2957942,	2840306],
+          ['WI',	1382210	,1409467,	2944620,	3056613],
+          ['WV',	187457	,486198,	708226,	661643],
+          ['WY',	55949	,174248,	248742,	245785]
+
+          
+                    
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }
+    </script>
+  </head>
+  <body>
+    <div id="table_div"></div>
+  </body>
+</html>
